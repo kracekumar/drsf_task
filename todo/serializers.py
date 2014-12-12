@@ -14,3 +14,10 @@ class TodoSerializer(serializers.ModelSerializer):
         model = Todo
         fields = ('id', 'name', 'priority', 'created_by', 'created_at',
                   'is_completed',)
+
+
+class UserSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=30, required=True)
+    password = serializers.CharField(max_length=30, required=True,
+                                     write_only=True)
+    email = serializers.EmailField(required=True)
