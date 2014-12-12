@@ -24,17 +24,20 @@ class TodoApiTestCase(APITestCase):
         data = {'name': 'new idea', 'created_by': self.user.id}
         response = self.client.post(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
-        
+
     def test_update_todo(self):
         # Create Todo
         # Update
+        pass
 
     def test_list_todo(self):
         # Create two todos
         # Assert length
         # Assert the returned data as well
+        pass
 
     def test_delete_todo(self):
         # Create a todo
         # Assert 201
         # Delete the todo
+        pass
