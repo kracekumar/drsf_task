@@ -33,7 +33,7 @@
 - `http://localhost:8000/todos/?is_completed=False`
 - `http://localhost:8000/todos/?created_by=1&is_completed=True`
 - Play around with filters
-- 
+
 ### Step 3: Authentication and Permission
 - Add `authentication_classes` attribute to `TodoViewSet` with value `BasicAuthentication`.
 - Add `permission_classes` attribute to `TodoViewSet` with value `IsAuthenticated`.
@@ -45,4 +45,6 @@
 - You can create your custom classes for Permission but it should have `has_permission` method and return `True` or `False`.
 
 ### Step 4: Write some tests
-- 
+-  Open `tests.py` and see through `test_create_todo`.
+-  Write the test for `list, update, delete` case.
+-  
