@@ -23,7 +23,7 @@
 ### Step 2: Filters
 - open `views.py` in `TodoViewSet`, add `filter_backends=[filters.OrderingFilter]` as attribute.
 - Add `filter_fields` attribute as list of fields which should be allowed.
-- Try few following urls `http://localhost:8000/todos/`, 
+- Try few following urls `http://localhost:8000/todos/`,
 - `http://localhost:8000/todos/?ordering=is_completed`, `http://localhost:8000/todos/?ordering=-is_completed`
 - `http://localhost:8000/todos/?ordering=-priority`, `http://localhost:8000/todos/?ordering=priority`
 - Add `DjangoFilterBackEnd` to `filter_backends`.
