@@ -1,0 +1,12 @@
+- Setup requirements and migrations.
+- Cd into todo's app and create serializers.py file.
+- Go to `models.py` and see definition.
+- Create a `TodoSerializer` subclassed from `serializers.ModelSerializer`.
+- Create a `Meta` nested class inside `TodoSerializer` with attributes `model, fields`.
+- Add fields `id, name, priority, created_by, created_at, is_completed`
+- Create a field `created_by` of type SlugRelatedField with `queryset, slug_field`.
+- Open `views.py` create `TodoViewSet` subclassed from `ModelViewSet`.
+- Add `queryset` and `serializer_class` as attributes to `TodoViewSet`.
+- Open `urls.py` in `drsf_task` and create router of `DefaultRouter` instance.
+- `register` `TodoViewSet`.
+- Add `router.urls` to urlpatterns.
