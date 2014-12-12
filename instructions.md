@@ -46,5 +46,22 @@
 
 ### Step 4: Write some tests
 -  Open `tests.py` and see through `test_create_todo`.
--  Write the test for `list, update, delete` case.
--  
+-  Write the test for `list, update, get, delete` case.
+
+### Step 5: Create Class Based View for User Creation
+- Create a `UserSerializer` with `username, password, email` field.
+- `username, password` are character field but password is write-only.
+- Make all three fields required.
+- Create `UserListApiView` inheriting from `APIView`.
+- Set `authentication_classes`, `permission_classes`.
+- Implement `get` method. Pass `many=True` to serializer.
+- Implement `post` method.
+- Register the view in `urls.py`. `url(r'^users/$', UserListApiView.as_view()),`
+- Try `http://localhost:8000/users/`.
+- Create a new class `UserDetailApiView` subclassing `APIView`.
+-  Add a method `get_object` which will fetch the item from db given a `pk`.
+-  Add methods `get` and `post`.
+-  Register the `UserDetailApiView` in `urls.py`. `url(r'^users/(?P<pk>[0-9]+)/$', UserDetailApiView.as_view()),`
+-  Create a new users using requests.
+
+### Hope, you learnt something! DRSF code is clean and Pythonic.
